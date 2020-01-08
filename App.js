@@ -1,19 +1,37 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { YellowBox } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import EventList from './EventList';
+import EventForm from './EventForm';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello world!</Text>
-    </View>
-  );
-}
+// class App extends Component {
+//   render() {
+//     return (
+//       <EventList />
+//     );
+//   } 
+// }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFF',
-    alignItems: 'center',
-    justifyContent: 'center',
+YellowBox.ignoreWarnings([
+  'Warning: componentWillMount is deprecated',
+  'Warning: componentWillReceiveProps is deprecated',
+  'Warning: componentWillReceiveProps has been renamed',
+]);
+ 
+const AppNavigator = createStackNavigator({
+  list: {
+    screen: EventList,
+    navigationOptions: () => ({
+      title: 'Your Events',
+    }),
+  },
+  form: {
+    screen: EventForm,
+    navigationOptions: () => ({
+      title: 'Add Event',
+    }),
   },
 });
+
+export default createAppContainer(AppNavigator);
