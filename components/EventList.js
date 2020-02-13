@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import EventCard from './EventCard';
-import { getEvents } from './api';
+import { getEvents } from '../api';
 
 const styles = StyleSheet.create({
   list: {

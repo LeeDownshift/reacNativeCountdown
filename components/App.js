@@ -5,14 +5,6 @@ import { createStackNavigator } from 'react-navigation-stack';
 import EventList from './EventList';
 import EventForm from './EventForm';
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <EventList />
-//     );
-//   } 
-// }
-
 YellowBox.ignoreWarnings([
   'Warning: componentWillMount is deprecated',
   'Warning: componentWillReceiveProps is deprecated',

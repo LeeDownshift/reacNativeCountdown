@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, TouchableHighlight, StyleSheet } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { formatDateTime, saveEvent } from './api';
+import { formatDateTime, saveEvent } from '../api';
 
 const styles = StyleSheet.create({
   fieldContainer: {
