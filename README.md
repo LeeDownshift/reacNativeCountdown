@@ -1,5 +1,7 @@
 # React Native event countdown
 
+A simple countdown application built to get to grips with React Native and Expo.
+
 to start the application:
 
 You will need to have Expo client installed on your mobile device.
